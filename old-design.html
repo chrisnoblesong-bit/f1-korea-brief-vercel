@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>F1 KOREA BRIEF</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,"Noto Sans KR",sans-serif;background:#09090b;color:#fff}
+header{position:sticky;top:0;z-index:10;background:#101012ee;backdrop-filter:blur(12px);border-bottom:1px solid #29292d;padding:16px 6%;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:23px;font-weight:900}.logo b{color:#e10600}nav a{color:#aaa;text-decoration:none;margin-left:18px;font-size:13px}nav a:hover{color:white}
+.hero{padding:70px 6%;background:radial-gradient(circle at 80% 30%,#351010,transparent 35%),linear-gradient(120deg,#171719,#09090b)}
+.badge{background:#e10600;padding:7px 11px;border-radius:99px;font-size:11px;font-weight:bold}h1{font-size:clamp(42px,7vw,76px);line-height:.95;margin:18px 0 12px}.hero p{color:#aaa;max-width:650px;line-height:1.7}
+.container{max-width:1200px;margin:auto;padding:35px 6%}.toolbar{display:flex;gap:10px;margin:15px 0 22px}input{flex:1;background:#151518;border:1px solid #303034;border-radius:10px;padding:13px;color:white;outline:none}button{background:#e10600;color:white;border:0;border-radius:10px;padding:0 18px;font-weight:bold}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:#151518;border:1px solid #29292e;border-radius:15px;padding:19px}.card:hover{border-color:#555}.tag{color:#e10600;font-size:11px;font-weight:bold}.card h3{font-size:18px;line-height:1.4}.card p{color:#aaa;line-height:1.65;font-size:14px;min-height:70px}.source{font-size:11px;color:#666}.btn{display:inline-block;margin-top:10px;background:#242428;color:#fff;text-decoration:none;padding:8px 11px;border-radius:7px;font-size:11px}
+.section{margin-top:42px}h2{font-size:24px}.panel{background:#151518;border:1px solid #29292e;border-radius:15px;padding:20px}
+table{width:100%;border-collapse:collapse}th,td{padding:12px;border-bottom:1px solid #29292e;text-align:left;font-size:13px}th{color:#777;font-size:11px}
+footer{padding:35px 6%;text-align:center;color:#666;border-top:1px solid #222;margin-top:40px;font-size:11px}
+@media(max-width:800px){nav{display:none}.grid{grid-template-columns:1fr}.hero{padding-top:48px}}
+</style></head>
+<body>
+<header><div class="logo"><b>F1</b> KOREA BRIEF</div><nav><a href="#news">NEWS</a><a href="#race">RACE</a><a href="#tech">TECH</a><a href="#standings">STANDINGS</a></nav></header>
+<section class="hero"><span class="badge">2026 FORMULA 1 · KOREAN BRIEF</span><h1>F1을<br>한국어로.</h1><p>F1 공식 소식을 바탕으로 중요한 내용만 빠르게 읽을 수 있도록 정리합니다. 아래 기사는 현재 데모 데이터이며, 실제 운영에서는 공식 데이터/API와 연결할 수 있습니다.</p></section>
+<main class="container">
+<section id="news"><h2>🔥 최신 뉴스</h2><div class="toolbar"><input id="q" placeholder="뉴스 검색: 안토넬리, 맥라렌, 기술…"><button onclick="filterNews()">검색</button></div><div class="grid" id="newsGrid">
+<article class="card" data-search="이탈리아 GP에서 안토넬리가 보여준 놀라운 역전승 안토넬리는 그리드 19위에서 출발했지만 18랩 만에 선두에 올라 홈 경기에서 인상적인 우승을 거뒀습니다.">
+<span class="tag">F1</span><h3>이탈리아 GP에서 안토넬리가 보여준 놀라운 역전승</h3>
+<p>안토넬리는 그리드 19위에서 출발했지만 18랩 만에 선두에 올라 홈 경기에서 인상적인 우승을 거뒀습니다.</p><span class="source">공식 출처 · Formula1.com</span>
+<br><a class="btn" href="https://www.formula1.com/" target="_blank">원문 보기 ↗</a>
+</article>
+<article class="card" data-search="2026 시즌 후반부, 남은 레이스에서 주목할 점 유럽 라운드 이후 아제르바이잔부터 아부다비까지 이어지는 후반 일정에서 타이틀 경쟁과 팀별 개발이 핵심 관전 포인트입니다.">
+<span class="tag">F1</span><h3>2026 시즌 후반부, 남은 레이스에서 주목할 점</h3>
+<p>유럽 라운드 이후 아제르바이잔부터 아부다비까지 이어지는 후반 일정에서 타이틀 경쟁과 팀별 개발이 핵심 관전 포인트입니다.</p><span class="source">공식 출처 · Formula1.com</span>
+<br><a class="btn" href="https://www.formula1.com/" target="_blank">원문 보기 ↗</a>
+</article>
+<article class="card" data-search="스페인 마드리드에서 새로운 F1 무대가 시작 2026년 9월 11~13일 스페인 라운드는 마드리드의 새로운 서킷에서 열리는 첫 F1 이벤트입니다.">
+<span class="tag">RACE</span><h3>스페인 마드리드에서 새로운 F1 무대가 시작</h3>
+<p>2026년 9월 11~13일 스페인 라운드는 마드리드의 새로운 서킷에서 열리는 첫 F1 이벤트입니다.</p><span class="source">공식 출처 · Formula1.com</span>
+<br><a class="btn" href="https://www.formula1.com/" target="_blank">원문 보기 ↗</a>
+</article></div></section>
+<section id="race" class="section"><h2>🏁 2026 남은 일정</h2><div class="panel"><table><tr><th>ROUND</th><th>GP</th><th>DATE</th></tr>
+<tr><td>14</td><td>Spain · Madrid</td><td>11–13 Sep</td></tr><tr><td>15</td><td>Azerbaijan</td><td>24–26 Sep</td></tr><tr><td>16</td><td>Bahrain</td><td>2–4 Oct</td></tr><tr><td>17</td><td>Singapore</td><td>9–11 Oct</td></tr><tr><td>18</td><td>United States</td><td>23–25 Oct</td></tr><tr><td>19</td><td>Mexico</td><td>30 Oct–1 Nov</td></tr><tr><td>20</td><td>Brazil</td><td>6–8 Nov</td></tr><tr><td>21</td><td>Las Vegas</td><td>19–21 Nov</td></tr><tr><td>22</td><td>Qatar</td><td>27–29 Nov</td></tr><tr><td>23</td><td>Abu Dhabi</td><td>4–6 Dec</td></tr></table></div></section>
+<section id="tech" class="section"><h2>🔧 TECH</h2><div class="panel"><b>F1 기술 뉴스 자동 요약 영역</b><p style="color:#aaa;line-height:1.7">에어로다이내믹스, 파워유닛, 타이어, 규정 변화 등의 기사를 가져와 한국어 핵심 요약과 용어 설명을 제공하도록 확장할 수 있습니다.</p></div></section>
+<section id="standings" class="section"><h2>🏆 드라이버 순위</h2><div class="panel"><p style="color:#aaa">실제 운영 버전에서는 공식 데이터 소스와 연결해 자동 업데이트합니다.</p><table><tr><th>POS</th><th>DRIVER</th><th>TEAM</th></tr><tr><td>1</td><td>Kimi Antonelli</td><td>Mercedes</td></tr><tr><td>2</td><td>George Russell</td><td>Mercedes</td></tr><tr><td>3</td><td>Lando Norris</td><td>McLaren</td></tr></table></div></section>
+</main><footer>F1 KOREA BRIEF · 비공식 팬 프로젝트 · 원문 전체를 재게시하지 않습니다.</footer>
+<script>
+function filterNews(){const q=document.getElementById('q').value.toLowerCase();document.querySelectorAll('#newsGrid .card').forEach(c=>c.style.display=c.dataset.search.toLowerCase().includes(q)?'block':'none')}
+document.getElementById('q').addEventListener('input',filterNews);
+</script></body></html>

@@ -1,0 +1,1 @@
+{"name":"f1-korea-brief","version":"1.0.0","private":true,"type":"module","scripts":{"start":"node server/index.js","dev":"node --watch server/index.js"},"dependencies":{"express":"^5.1.0","rss-parser":"^3.13.0"}}
